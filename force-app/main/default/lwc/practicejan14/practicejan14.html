@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <lightning-button label="Show/Hide" onclick={onclickhandler}></lightning-button>
+        <template if:true={showcomponent}>
+        <h1>Show the component</h1>
+        </template>
+    </lightning-card>
+</template>

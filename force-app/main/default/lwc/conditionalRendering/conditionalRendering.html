@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Welcome to Salesforce">
+        <template if:true={showtemp}>
+            <h1>Welcome to Salesforce</h1>
+            <lightning-button label="Login" onclick={loginclick}></lightning-button>
+            <lightning-button label="SingUp" onclick={signupclick}></lightning-button>
+        </template>
+        <template if:true={logintemp}>
+            <h1>Login to your account</h1>
+            <lightning-input label="UserName"></lightning-input>
+            <lightning-input label="Password"></lightning-input>
+            <lightning-button label="Login" onclick={logindone}></lightning-button>
+        </template>
+        <template if:true={signuptemp}>
+            <h1>SignUp to your account</h1>
+            <lightning-input label="Name"></lightning-input>
+            <lightning-input label="Mobile no"></lightning-input>
+            <lightning-input label="Email"></lightning-input>
+            <lightning-input label="Password"></lightning-input>
+            <lightning-input label="Company"></lightning-input>
+            <lightning-button label="SignUp" onclick={logindone}></lightning-button>
+        </template>
+        <template if:true={welcometemp}>
+            <h1>You have successfully LoggedIn</h1>
+            <lightning-button label="Back" onclick={goback}></lightning-button>
+        </template>
+    </lightning-card>
+</template>

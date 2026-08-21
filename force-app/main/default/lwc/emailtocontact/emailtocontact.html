@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Email to Contact">
+        <lightning-input
+                label="Email Subject"
+                value={emailSubject}
+                onchange={handleSubjectChange}>
+            </lightning-input>        
+        <lightning-textarea
+                label="Email Body"
+                value={emailBody}
+                onchange={handleBodyChange}>
+        </lightning-textarea>        
+        <lightning-button label ="Send Email" onclick={onButtonClick}></lightning-button>
+    </lightning-card>
+</template>

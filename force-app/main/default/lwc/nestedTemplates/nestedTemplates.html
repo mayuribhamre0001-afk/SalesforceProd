@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Welcome To GradeX Academy">
+        <p>Register or signup to continue</p>
+    </lightning-card>
+    <br></br>
+    <lightning-button label="Register" onclick={onButton1Click}></lightning-button>
+    <lightning-button label="Signup" onclick={onButton2Click}></lightning-button>
+    <br></br>
+    <template if:true={temp1}>
+        <lightning-card title="Register">
+            <lightning-input type="text" label="First Name"></lightning-input>
+            <lightning-input type="text" label="Last Name"></lightning-input>
+            <lightning-input type="email" label="Email"></lightning-input>
+            <lightning-input type="password" label="Password"></lightning-input>
+            <lightning-input type="password" label="Confirm Password"></lightning-input>
+            <lightning-button label="Register"> </lightning-button>
+        </lightning-card>
+    </template>
+    <template if:true = {temp2}>
+        <lightning-card title="SignUp">
+            <lightning-input type="email" label="Email"></lightning-input>
+            <lightning-input type="password" label="Password"></lightning-input>
+        </lightning-card>
+    </template>
+
+
+</template>

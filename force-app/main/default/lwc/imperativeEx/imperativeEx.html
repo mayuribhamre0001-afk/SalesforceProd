@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Account Data"> 
+        <lightning-input label ="Enter Name" onchange={onchangeHandler}></lightning-input>
+        <lightning-button label ="Search" onclick={onButtonClick}></lightning-button>
+        <lightning-datatable key-field="Id" data={datalist} columns={clm}></lightning-datatable>
+    </lightning-card>
+</template>

@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="Flight Ticket Booking">
+        <div class="slds-p-around_medium">
+            
+            <!-- Flight Dropdown -->
+            <lightning-combobox 
+                name="flight"
+                label="Select Flight"
+                value={selectedFlightId}
+                placeholder="Choose a flight"
+                options={flightOptions}
+                onchange={handleFlightChange}>
+            </lightning-combobox>
+
+            <template if:true={selectedFlight}>
+                <p>Total Seats: {selectedFlight.Total_Seats__c}</p>
+                <p>Seats Booked: {bookedSeats.length}</p>
+                <p>Seats Remaining: {remainingSeats}</p>
+
+                <hr />
+
+                <!-- Seat Booking -->
+                <lightning-input 
+                    type="text" 
+                    label="Customer Name" 
+                    value={customerName}
+                    onchange={handleNameChange}>
+                </lightning-input>
+
+                <lightning-input 
+                    type="number" 
+                    label="Seat Number" 
+                    value={seatNumber}
+                    onchange={handleSeatChange}>
+                </lightning-input>
+
+                <lightning-button 
+                    label="Book Seat" 
+                    variant="brand" 
+                    onclick={handleBookSeat}>
+                </lightning-button>
+            </template>
+
+        </div>
+    </lightning-card>
+</template>

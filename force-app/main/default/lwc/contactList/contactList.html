@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Related Contacts">
+        <template if:true={contacts}>
+            <template for:each={contacts} for:item="con">
+                <p key={con.Id}>{con.Name} - {con.Email}</p>
+            </template>
+        </template>
+        <template if:false={contacts}>
+        <p>No contacts found</p>
+        </template>
+    </lightning-card>
+</template>

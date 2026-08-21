@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Imperative Method">
+        <lightning-input label="Enter name" type="text" onchange={changeHandler}></lightning-input>
+        <lightning-button label="Search" onclick={clickHandler}></lightning-button>
+        <lightning-datatable data={data} columns={columns} key-field="Id"></lightning-datatable>
+    </lightning-card>
+</template>

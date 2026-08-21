@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Accounts">
+        <template for:each={accounts} for:item="acc">
+            <p key={acc.Id}
+               class="slds-p-around_small"
+               onclick={handleSelect}
+               data-id={acc.Id}
+               data-name={acc.Name}
+               data-industry={acc.Industry}>
+               {acc.Name}
+            </p>
+        </template>
+
+        <c-parent-component
+            account-name={selectedName}
+            account-industry={selectedIndustry}>
+        </c-parent-component>
+    </lightning-card>
+</template>

@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="Search Account">
+        <div class="slds-p-around_medium">
+
+            <lightning-input 
+                label="Enter Account Name"
+                value={accountName}
+                oninput={handleChange}>
+            </lightning-input>
+
+            <!-- Pass accountId to child -->
+            <c-contact-list account-id={accountId}></c-contact-list>
+
+        </div>
+    </lightning-card>
+</template>

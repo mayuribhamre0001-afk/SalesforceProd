@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Accounts">
+        <lightning-input label="Search Account" onchange={changehandler}></lightning-input>
+        <lightning-button label="Search" onclick={clickhandler}></lightning-button>
+        <lightning-datatable data={accounts} columns={columns} key-field="Id"></lightning-datatable>
+    </lightning-card>
+</template>

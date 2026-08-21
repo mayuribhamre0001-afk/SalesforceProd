@@ -1,0 +1,10 @@
+<template>
+<lightning-card title="Account Contact Detail">
+    <lightning-input type="text" label="Search" onchange={handlechange} ></lightning-input>
+     <lightning-button 
+            label="Search" 
+            onclick={handlesearch}>
+        </lightning-button>
+    <lightning-datatable key-field="Id" data={data} columns={column} onrowaction={rowactionhandler}></lightning-datatable>
+</lightning-card>
+</template>
